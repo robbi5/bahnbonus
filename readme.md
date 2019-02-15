@@ -9,7 +9,7 @@ This repository describes the used API endpoints, so anybody can use the bahn.bo
 Authentication
 --------------
 
-Authentication is implemented with OpenID Connect - using [keycloak](https://keycloak.org). The App is using [the standard OpenID Connect SDK _AppAuth-iOS_](https://github.com/openid/AppAuth-iOS) with the autodiscovery with following URL:
+Authentication is implemented with OpenID Connect - using [keycloak](https://www.keycloak.org). The App is using [the standard OpenID Connect SDK _AppAuth-iOS_](https://github.com/openid/AppAuth-iOS) with the autodiscovery with following URL:
 
 ```
 https://auth.businesshub.deutschebahn.com/auth/realms/kubi/.well-known/openid-configuration
