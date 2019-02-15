@@ -34,6 +34,7 @@ API
 
 For the following requests to `api.businesshub.deutschebahn.com` the Access Token from the OpenID Connect Flow is used as the `Authorization: Bearer {token}` header. By using the token you have only access to the data from the account you logged in with. Additionally, the header `Key: xtLA2lhamHx3ujzoISx2RfE1N9AoXXLZ` is sent with every request.
 
+### customer
 
 #### customer status
 GET `https://api.businesshub.deutschebahn.com/self-service/v1/customerdata/customerStatus`
@@ -45,30 +46,6 @@ GET `https://api.businesshub.deutschebahn.com/self-service/v1/customerdata/custo
     "lastname": "Mustermann",
     "salutation": "Herr",
     "title": null
-}
-```
-
-#### loyality service configuration
-GET `https://api.businesshub.deutschebahn.com/loyalty-service/v1/configuration`
-```
-{
-    "bonusPointsExpirationPeriod": 36,
-    "comfortStatusPointsRequirement": 2000,
-    "statusPointsExpirationPeriod": 12
-}
-```
-
-#### loyality points
-GET `https://api.businesshub.deutschebahn.com/loyalty-service/v1/customer/loyalty`
-```
-{
-    "collectedPoints": {
-        "bonus": 1783,
-        "status": 1750
-    },
-    "comfortStatus": false,
-    "locked": false,
-    "registered": true
 }
 ```
 
@@ -91,6 +68,41 @@ GET `https://api.businesshub.deutschebahn.com/self-service/v1/customerdata`
     "phone": "+49123456789",
     "salutation": "Herr",
     "title": null
+}
+```
+
+#### customer marketing status
+GET `https://api.businesshub.deutschebahn.com/self-service/v1/customerdata/emailmarketing`
+```
+{
+    "email": "maxmustermann@test.com",
+    "marketingPermission": true
+}
+```
+
+### loyality
+
+#### loyality service configuration
+GET `https://api.businesshub.deutschebahn.com/loyalty-service/v1/configuration`
+```
+{
+    "bonusPointsExpirationPeriod": 36,
+    "comfortStatusPointsRequirement": 2000,
+    "statusPointsExpirationPeriod": 12
+}
+```
+
+#### loyality points
+GET `https://api.businesshub.deutschebahn.com/loyalty-service/v1/customer/loyalty`
+```
+{
+    "collectedPoints": {
+        "bonus": 1783,
+        "status": 1750
+    },
+    "comfortStatus": false,
+    "locked": false,
+    "registered": true
 }
 ```
 
