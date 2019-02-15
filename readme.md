@@ -12,13 +12,13 @@ This repository describes the used API endpoints, so anybody can use the BahnBon
 Authentication
 --------------
 
-Authentication is implemented with OpenID Connect - using [keycloak](https://www.keycloak.org). The App is using [the standard OpenID Connect SDK _AppAuth-iOS_](https://github.com/openid/AppAuth-iOS) with the autodiscovery with following URL:
+Authentication happens with your bahn.de Account. This is implemented with OpenID Connect - they are using [keycloak](https://www.keycloak.org) on the server side. The App is using [the standard OpenID Connect SDK _AppAuth-iOS_](https://github.com/openid/AppAuth-iOS) with autodiscovery with the following URL:
 
 ```
 https://auth.businesshub.deutschebahn.com/auth/realms/kubi/.well-known/openid-configuration
 ```
 
-The following parameters are used for the authorization request:
+These parameters are used for the authorization request:
 
 ```
 scope:          openid profile user:read user:write
@@ -27,12 +27,12 @@ redirect_uri:   kubi://authentication/redirect
 response_type:	code
 ```
 
-After receiving the redirect to `kubi://authentication/redirect?state=...&session_state=...&code=...`, send a POST request with the code and with `client_id, redirect_uri, grant_type, code_verifier` to the `token_endpoint` from the autodiscovery url.
+After handling the whole flow and receiving the http redirect to `kubi://authentication/redirect?state=...&session_state=...&code=...`, send a POST request with the code and with `client_id, redirect_uri, grant_type, code_verifier` to the `token_endpoint` specified in the response from the autodiscovery url.
 
 API
 ---
 
-For the following requests to `api.businesshub.deutschebahn.com` the Access Token from the OpenID Connect Flow is used as the `Authorization: Bearer {token}` header. Additionally, the header `Key: xtLA2lhamHx3ujzoISx2RfE1N9AoXXLZ` is sent with every request.
+For the following requests to `api.businesshub.deutschebahn.com` the Access Token from the OpenID Connect Flow is used as the `Authorization: Bearer {token}` header. By using the token you have only access to the data from the account you logged in with. Additionally, the header `Key: xtLA2lhamHx3ujzoISx2RfE1N9AoXXLZ` is sent with every request.
 
 
 #### customer status
