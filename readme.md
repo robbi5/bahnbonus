@@ -145,3 +145,9 @@ GET `https://api.businesshub.deutschebahn.com/loyalty-service/v1/customer/transa
     ...
 ]
 ```
+
+Notes
+-----
+Have fun with your data. If you find something interesting you can do with it, feel free to open a pull request with a link to your project.
+
+License: [CC-0](https://creativecommons.org/publicdomain/zero/1.0/deed)
