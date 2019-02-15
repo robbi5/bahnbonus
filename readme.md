@@ -1,9 +1,9 @@
-bahn.bonus API
+BahnBonus API
 ==============
 
-In Feburary 2019, the [BahnCard-Service released](https://www.bahn.de/p/view/service/mobile/bahnbonus-app.shtml) the Bahn.Bonus App for [iOS](https://itunes.apple.com/de/app/bahnbonus/id1436948507) and [Android](https://play.google.com/store/apps/details?id=com.deutschebahn.bahnbonus). This is another App from DB people may want to install - but more interesting: this opens up the bahn.bonus loyality status as an API.
+In Feburary 2019, the [BahnCard-Service released](https://www.bahn.de/p/view/service/mobile/bahnbonus-app.shtml) the BahnBonus App for [iOS](https://itunes.apple.com/de/app/bahnbonus/id1436948507) and [Android](https://play.google.com/store/apps/details?id=com.deutschebahn.bahnbonus). This is another App from DB people may want to install - but more interesting: this opens up the BahnBonus loyality status as an API.
 
-This repository describes the used API endpoints, so anybody can use the bahn.bonus loyality status in more creative ways. Have fun!
+This repository describes the used API endpoints, so anybody can use the BahnBonus loyality status in more creative ways. Have fun!
 
 
 Authentication
