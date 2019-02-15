@@ -5,6 +5,9 @@ In Feburary 2019, the [BahnCard-Service released](https://www.bahn.de/p/view/ser
 
 This repository describes the used API endpoints, so anybody can use the BahnBonus loyality status in more creative ways. Have fun!
 
+![db-comfort-api](https://user-images.githubusercontent.com/172415/52875440-a3679800-3154-11e9-8755-149f335ccb17.png)
+
+(Actually, it works for all DB customers — even without comfort status :) )
 
 Authentication
 --------------
